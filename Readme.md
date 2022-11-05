@@ -29,3 +29,12 @@ This package is especially not based on RxJS!
 
 - FileTarget() 
 - UrlTarget() - too much work? 
+
+## Useful Links 
+
+- [web.dev - Guide to Webstreams](https://web.dev/streams/)
+- [MDN - General Section on Webstreams](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API)
+- [MDN - Webstreams API Concepts](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Concepts)
+- [MDN - Using Readable Streams](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams)
+- [MDN - Using Readable Byte Streams](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)
+- [MDN - Using Writable Streams](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_writable_streams)

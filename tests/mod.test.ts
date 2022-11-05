@@ -1,5 +1,5 @@
-import { assert, describe, it } from "std_testing";
-import { dummyExport } from "@/mod.ts";
+import { assert, describe, it } from "@deps/std_testing.ts";
+import { dummyExport } from "@mod";
 
 describe(`mod.ts`, () => {
   it(`should export correct objects and types`, () => {

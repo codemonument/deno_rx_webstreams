@@ -21,6 +21,12 @@
      * Docs for Deno Tasks: https://deno.land/manual@v1.27.1/tools/task_runner
      */
     "tasks": {
-        "start": "deno run --unstable example/main.ts"
+        "start": "deno run --unstable example/main.ts", 
+        "test": "deno test --unstable "
+    }, 
+    "test": {
+        "files": {
+            "include": ["tests"]
+        }
     }
 }

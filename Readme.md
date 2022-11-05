@@ -1,35 +1,31 @@
-# Deno Scripting Template
+# Rx Webstreams 
 
-A template repo for developing scripts with deno. These scripts can be compiled
-to single js files or even bundled with the deno executable for distribution.
+**WARNING: HIGHLY EXPERIMENTAL RIGHT NOW!**
 
-This could also be used as a base for a cli written in deno, simply use a
-cli-args parsing package in `main.ts` and build out the commands.
+A deno package by [@codemonument](https://github.com/codemonument) with RxJS like functionality, but for webstreams. 
+It provides a lot of predefined sources, targets and especially transforms! 
 
-## Folder Structure
+Note, that the api is inspired by RxJS, but not related in any other way. 
+This package is especially not based on RxJS!
 
-- `.vscode` = A folder, 
-  - containing a `settings.json` which activates the deno language server for this workspace
-  - containing a `extensions.json` with recommended vscode extensions for this workspace
-- `example` = A folder, containing entry deno files for demonstrating the modules functionalities 
-   - contains `main.ts` - the default file for examples
-- `importMap.json` = A file, including dependency mappings to url
-- `deps` - a folder to re-export dependencies 
-   (for example to group testing dependencies into one import)
-- `lib` = A folder containing more source files which are exported by `mod.ts`
-   - Hint: you may create multiple of them to structure your module.
-- `.gitignore` = A normal gitingore file
-- `deno.jsonc` - a config file for the deno cli
-   - includes tasks (a.k.a aliases for long commands) with `deno task`
-- `LICENSE`
-- `mod.ts` = the entrypoint for this deno module, which exports all functionality of this module
-- `Readme.md` = A normal Readme file
+## Parts 
 
-## Running examples 
+- Sources: Predefined Readable Streams, like FileSource(), TimerSource(), and more 
+- Transforms: Predefined Transport Streams, like map(), reduce(), and more 
+- Targets: Predefined Writable Streams, like FileTarget(), UrlTarget(), and more
 
-see `tasks` property in `deno.jsonc`
-Run each key there with `deno task <task-key>`
 
-## Configure Deployments to deno.land/x 
+## Sources (planned)
 
-see https://deno.land/add_module
+- FileSource() 
+- TimerSource()
+
+## Transforms (planned)
+
+- map() 
+- reduce()
+
+## Targets (planned)
+
+- FileTarget() 
+- UrlTarget() - too much work? 

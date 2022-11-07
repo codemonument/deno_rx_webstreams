@@ -16,7 +16,7 @@ export type SimpleTimerSourceOptions = {
 };
 
 const defaultOptions: SimpleTimerSourceOptions = {
-  intervalInMilliseconds: 1000,
+  intervalInMilliseconds: 100,
   maxEventCount: 5,
 };
 

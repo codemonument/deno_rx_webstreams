@@ -14,11 +14,14 @@ This package is especially not based on RxJS!
 - Transforms: Predefined Transport Streams, like map(), reduce(), and more 
 - Targets: Predefined Writable Streams, like fileTarget(), urlTarget(), and more
 
+## Usage 
+
+ToDo (Look at the tests in the meantime! They give you a very good idea of how to use those!)
 
 ## Sources
 
+- timerSource() - implemented ✅
 - fileSource() - planned
-- timerSource() - planned
 
 ## Transforms
 

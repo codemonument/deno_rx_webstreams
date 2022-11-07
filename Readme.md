@@ -10,15 +10,15 @@ This package is especially not based on RxJS!
 
 ## Parts 
 
-- Sources: Predefined Readable Streams, like FileSource(), TimerSource(), and more 
+- Sources: Predefined Readable Streams, like fileSource(), timerSource(), and more 
 - Transforms: Predefined Transport Streams, like map(), reduce(), and more 
-- Targets: Predefined Writable Streams, like FileTarget(), UrlTarget(), and more
+- Targets: Predefined Writable Streams, like fileTarget(), urlTarget(), and more
 
 
 ## Sources
 
-- FileSource() - planned
-- TimerSource() - planned
+- fileSource() - planned
+- timerSource() - planned
 
 ## Transforms
 
@@ -27,8 +27,8 @@ This package is especially not based on RxJS!
 
 ## Targets
 
-- FileTarget() - planned
-- UrlTarget() - in consideration
+- fileTarget() - planned
+- urlTarget() - in consideration
 
 ## Useful Links 
 

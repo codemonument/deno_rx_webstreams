@@ -12,11 +12,11 @@ describe(`simpleTimerStream`, () => {
     assert(eventLog.length === 5);
   });
 
-  it(`should output 5 events, 1 each 500ms`, async () => {
+  it(`should output 5 events, 1 each 50ms`, async () => {
     const eventLog = [];
 
     const timer = simpleTimerSource({
-      intervalInMilliseconds: 500,
+      intervalInMilliseconds: 50,
       maxEventCount: 5,
     });
 
@@ -34,10 +34,10 @@ describe(`simpleTimerStream`, () => {
 
     const timeoutId = setTimeout(() => {
       abortController.abort();
-    }, 4500);
+    }, 450);
 
     const timer = simpleTimerSource({
-      intervalInMilliseconds: 1000,
+      intervalInMilliseconds: 100,
       abortSignal: abortController.signal,
     });
 

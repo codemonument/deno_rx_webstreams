@@ -1,4 +1,4 @@
-export type SimpleTimerSourceOptions = {
+export type TimerSourceOptions = {
   /**
    * The interval in milliseconds which is used for setInterval()
    */
@@ -15,7 +15,7 @@ export type SimpleTimerSourceOptions = {
   abortSignal?: AbortSignal;
 };
 
-const defaultOptions: SimpleTimerSourceOptions = {
+const defaultOptions: TimerSourceOptions = {
   intervalInMilliseconds: 100,
   maxEventCount: 5,
 };
@@ -25,7 +25,7 @@ const defaultOptions: SimpleTimerSourceOptions = {
  * @param options
  * @returns
  */
-export function simpleTimerSource(options?: SimpleTimerSourceOptions) {
+export function timerSource(options?: TimerSourceOptions) {
   if (!options) {
     options = defaultOptions;
   } else {

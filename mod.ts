@@ -3,4 +3,4 @@
  * which should be used by other people
  */
 
-export * from "./lib/sources/simpleTimerSource.ts";
+export * from "./lib/sources/timerSource.ts";

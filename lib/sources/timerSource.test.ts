@@ -1,10 +1,10 @@
 import { assert, describe, it } from "@deps/std_testing.ts";
-import { simpleTimerSource } from "@mod";
+import { timerSource } from "@mod";
 
 describe(`simpleTimerStream`, () => {
   it(`should output 5 events, 1 each 100ms (defaults)`, async () => {
     const eventLog = [];
-    for await (const event of simpleTimerSource()) {
+    for await (const event of timerSource()) {
       console.log(event);
       eventLog.push(event);
     }
@@ -15,7 +15,7 @@ describe(`simpleTimerStream`, () => {
   it(`should output 5 events, 1 each 50ms`, async () => {
     const eventLog = [];
 
-    const timer = simpleTimerSource({
+    const timer = timerSource({
       intervalInMilliseconds: 50,
       maxEventCount: 5,
     });
@@ -36,7 +36,7 @@ describe(`simpleTimerStream`, () => {
       abortController.abort();
     }, 450);
 
-    const timer = simpleTimerSource({
+    const timer = timerSource({
       intervalInMilliseconds: 100,
       abortSignal: abortController.signal,
     });

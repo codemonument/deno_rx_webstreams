@@ -1,8 +1,8 @@
-import { assert, describe, it } from "@deps/std_testing.ts";
-import { dummyExport } from "@mod";
+import { assertExists, describe, it } from "@deps/std_testing.ts";
+import { simpleTimerSource } from "@mod";
 
 describe(`mod.ts`, () => {
   it(`should export correct objects and types`, () => {
-    assert(dummyExport);
+    assertExists(simpleTimerSource);
   });
 });

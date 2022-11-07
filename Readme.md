@@ -1,6 +1,6 @@
 # Rx Webstreams 
 
-**WARNING: HIGHLY EXPERIMENTAL RIGHT NOW!**
+**WARNING: HIGHLY ALPHA RIGHT NOW!**
 
 A deno package by [@codemonument](https://github.com/codemonument) with RxJS like functionality, but for webstreams. 
 It provides a lot of predefined sources, targets and especially transforms! 

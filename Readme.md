@@ -15,20 +15,20 @@ This package is especially not based on RxJS!
 - Targets: Predefined Writable Streams, like FileTarget(), UrlTarget(), and more
 
 
-## Sources (planned)
+## Sources
 
-- FileSource() 
-- TimerSource()
+- FileSource() - planned
+- TimerSource() - planned
 
-## Transforms (planned)
+## Transforms
 
-- map() 
-- reduce()
+- map() - planned
+- reduce() - planned
 
-## Targets (planned)
+## Targets
 
-- FileTarget() 
-- UrlTarget() - too much work? 
+- FileTarget() - planned
+- UrlTarget() - in consideration
 
 ## Useful Links 
 

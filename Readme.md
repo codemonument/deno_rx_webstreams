@@ -1,7 +1,16 @@
 # Rx Webstreams 
 
-**WARNING: HIGHLY ALPHA RIGHT NOW!**
+**Note: Very limited coverage right now**
+Compared to rxJS, this lib has not nearly implemented enough at the time. 
+But, all things that are added are inteded to be unit-tested well. 
 
+The good thing: each pice of this lib can be used separately with other webstreams found in any other library.  
+Because of the webstreams foundation they will likely be compatible. 
+In fact, I use many of these things implemented here myself, 
+for example the timerSource() package for generating example events for testing cli progress bars.  
+See here for details in the [progress package](https://deno.land/x/progress): https://github.com/deno-library/progress/blob/master/tests/mod.test.ts
+
+## Description
 A deno package by [@codemonument](https://github.com/codemonument) with RxJS like functionality, but for webstreams. 
 It provides a lot of predefined sources, targets and especially transforms! 
 

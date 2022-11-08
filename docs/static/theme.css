@@ -1,25 +1,25 @@
 html {
     /* light */
     --brand-light: var(--pink-5);
-    --text1-light: var(--gray-6);
-    --text2-light: var(--gray-5);
-    --surface1-light: var(--gray-0);
-    --surface2-light: var(--gray-1);
-    --surface3-light: var(--gray-2);
-    --surface4-light: var(--gray-3);
+    --text1-light: var(--gray-7);
+    --text2-light: var(--gray-7);
+    --surface1-light: var(--gray-0-hsl);
+    --surface2-light: var(--gray-1-hsl);
+    --surface3-light: var(--gray-2-hsl);
+    --surface4-light: var(--gray-3-hsl);
     --surface-shadow-light: 200 10% 20%;
     --shadow-strength-light: 35%;
 
     /* dark */
     --brand-dark: var(--pink-5);
-    --text1-dark: var(--gray-1);
-    --text2-dark: var(--gray-3);
-    --surface1-dark: var(--gray-9);
-    --surface2-dark: var(--gray-8);
-    --surface3-dark: var(--gray-7);
-    --surface4-dark: var(--gray-6);
+    --text1-dark: var(--gray-2);
+    --text2-dark: var(--gray-1);
+    --surface1-dark: var(--gray-9-hsl);
+    --surface2-dark: var(--gray-8-hsl);
+    --surface3-dark: var(--gray-7-hsl);
+    --surface4-dark: var(--gray-6-hsl);
     --surface-shadow-dark: 200 50% 3%;
-    --shadow-strength-dark: 80%;
+    --shadow-strength-dark: 30%;
 }
 
 :root {

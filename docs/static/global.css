@@ -9,7 +9,9 @@ html {
     font-weight: var(--font-weight-3);
 }
 
-body {}
+body {
+    --link-visited: var(--text2);
+}
 
 main {
     padding-left: var(--size-5);
@@ -17,7 +19,7 @@ main {
 
 nav {
     height: max-content;
-    background-color: hsl(var(--gray-2-hsl) / 70%);
+    background-color: hsl(var(--surface2) / 60%);
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -30,6 +32,7 @@ nav {
 nav>a {
     padding-block: var(--size-3);
     margin-block: var(--size-2);
+    color: var(--text2);
     letter-spacing: var(--font-letterspacing-4);
     text-decoration: none;
     height: max-content;
@@ -44,7 +47,7 @@ nav>a:focus {
 }
 
 nav>a:visited {
-    color: var(--gray-7)
+    /* color: var(--gray-7) */
 }
 
 h1,
@@ -53,6 +56,7 @@ h3,
 h4 {
     font-weight: var(--font-weight-6);
     margin-block: var(--size-3);
+    color: var(--text1);
 }
 
 button {

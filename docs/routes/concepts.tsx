@@ -4,7 +4,7 @@ export default function ConceptsPage() {
   return (
     <Layout>
       <h1>Concepts</h1>
-      <strong>TODO</strong>
+      <p>TODO</p>
     </Layout>
   );
 }

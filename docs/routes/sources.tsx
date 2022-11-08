@@ -4,7 +4,7 @@ export default function SourcesPage() {
   return (
     <Layout>
       <h1>Sources</h1>
-      <strong>TODO</strong>
+      <p>TODO</p>
     </Layout>
   );
 }

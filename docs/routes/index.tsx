@@ -4,7 +4,7 @@ import { Nav } from "@docs/components/nav.tsx";
 export default function Home() {
   return (
     <Layout>
-      <h1>Docs rx_webstreams</h1>
+      <h1>Rx Webstreams Docs</h1>
     </Layout>
   );
 }

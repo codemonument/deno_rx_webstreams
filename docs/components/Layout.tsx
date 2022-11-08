@@ -1,5 +1,6 @@
 import { JSX } from "preact";
 import { Head } from "$fresh/runtime.ts";
+import { Nav } from "./nav.tsx";
 
 export function Layout(props: JSX.HTMLAttributes<HTMLButtonElement>) {
   return (
@@ -11,9 +12,12 @@ export function Layout(props: JSX.HTMLAttributes<HTMLButtonElement>) {
         <link rel="stylesheet" href="./open-props@1.4.16/buttons.min.css" />
         <link rel="stylesheet" href="./global.css"></link>
       </Head>
-      <div class="layout">
+
+      <Nav></Nav>
+
+      <main>
         {props.children}
-      </div>
+      </main>
     </>
   );
 }

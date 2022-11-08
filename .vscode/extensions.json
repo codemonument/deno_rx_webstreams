@@ -1,6 +1,6 @@
 {
   "recommendations": [
-    "umbo.vscode-velociraptor",
+    "sastan.twind-intellisense",
     "denoland.vscode-deno"
   ]
 }

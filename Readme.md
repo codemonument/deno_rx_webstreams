@@ -39,6 +39,7 @@ ToDo (Look at the tests in the meantime! They give you a very good idea of how t
 
 ## Targets
 
+- simpleCallbackTarget() - implemented ✅
 - fileTarget() - planned
 - urlTarget() - in consideration
 

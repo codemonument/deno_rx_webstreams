@@ -1,5 +1,9 @@
 # Changelog rx_webstreams 
 
+## 0.2.0 - 2022-11-08
+
+- Add simpleCallbackTarget() and mark it as implemented in readme
+
 ## 0.1.1 - 2022-11-08
 
 - Mark timerSource() as implemented in readme

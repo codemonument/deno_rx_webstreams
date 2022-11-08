@@ -9,15 +9,14 @@ html {
     font-weight: var(--font-weight-3);
 }
 
-body {
-}
+body {}
 
 main {
     padding-left: var(--size-5);
 }
 
 nav {
-    height: max-content; 
+    height: max-content;
     background-color: hsl(var(--gray-2-hsl) / 70%);
     display: flex;
     flex-flow: row wrap;
@@ -25,14 +24,33 @@ nav {
     font-weight: var(--font-weight-5);
     padding-left: var(--size-3);
     gap: var(--size-3);
+    box-shadow: var(--shadow-2);
 }
 
-nav > a{
+nav>a {
     padding-block: var(--size-3);
+    margin-block: var(--size-2);
     letter-spacing: var(--font-letterspacing-4);
+    text-decoration: none;
+    height: max-content;
 }
 
-h1,h2,h3,h4 {
+nav>a:hover,
+nav>a:focus {
+    outline: var(--brand) solid var(--border-size-2);
+    outline-offset: 0;
+    border-radius: var(--radius-3);
+
+}
+
+nav>a:visited {
+    color: var(--gray-7)
+}
+
+h1,
+h2,
+h3,
+h4 {
     font-weight: var(--font-weight-6);
     margin-block: var(--size-3);
 }

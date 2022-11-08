@@ -11,6 +11,7 @@ export function Layout(props: JSX.HTMLAttributes<HTMLButtonElement>) {
         <link rel="stylesheet" href="./open-props@1.4.21/colors-hsl.min.css" />
         <link rel="stylesheet" href="./open-props@1.4.21/normalize.min.css" />
         <link rel="stylesheet" href="./open-props@1.4.21/buttons.min.css" />
+        <link rel="stylesheet" href="./theme.css"></link>
         <link rel="stylesheet" href="./global.css"></link>
       </Head>
 

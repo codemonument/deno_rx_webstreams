@@ -1,5 +1,30 @@
+head {
+    display: none;
+}
+
+html {
+    font-family: var(--font-sans);
+    background-image: var(--gradient-3);
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-3);
+}
+
 body {
-    background: var(--gradient-3);
+    margin-inline: var(--size-2);
+}
+
+h1,h2,h3,h4 {
+    font-weight: var(--font-weight-6);
+    margin-block: var(--size-3);
+}
+
+button {
+    color: var(--gray-2);
+}
+
+.welcome {
+    font-size: var(--font-size-6);
+    font-weight: var(--font-weight-5);
 }
 
 .layout {

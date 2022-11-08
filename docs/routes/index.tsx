@@ -4,7 +4,7 @@ import Counter from "../islands/Counter.tsx";
 export default function Home() {
   return (
     <Layout>
-      <Counter start={3} />
+      <h1>Docs rx_webstreams</h1>
     </Layout>
   );
 }

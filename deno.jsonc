@@ -12,7 +12,9 @@
 {
     "importMap": "import_map.json",
     "compilerOptions": {
-        "strict": true
+        "strict": true,
+        "jsx": "react-jsx",
+        "jsxImportSource": "preact"
     },
     "test": {
         "files": {

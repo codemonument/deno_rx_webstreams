@@ -10,7 +10,24 @@ html {
 }
 
 body {
+}
+
+main {
     margin-inline: var(--size-2);
+}
+
+nav {
+    height: max-content; 
+    background-color: hsl(var(--gray-2-hsl) / 70%);
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    font-weight: var(--font-weight-5);
+}
+
+nav > a{
+    padding: var(--size-3);
+    letter-spacing: var(--font-letterspacing-4);
 }
 
 h1,h2,h3,h4 {
@@ -25,8 +42,4 @@ button {
 .welcome {
     font-size: var(--font-size-6);
     font-weight: var(--font-weight-5);
-}
-
-.layout {
-    
 }

@@ -5,7 +5,10 @@ const defaultOptions: FileSourceOptions = {};
 /**
  * Creates a Source ReadableStream (Webstream) which opens a file for reading
  */
-export async function fileSource(filepath: string, options: FileSourceOptions) {
+export async function fileSource(
+  filepath: string,
+  options?: FileSourceOptions,
+) {
   if (!options) {
     options = defaultOptions;
   } else {

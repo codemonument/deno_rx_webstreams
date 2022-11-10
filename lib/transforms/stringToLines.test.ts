@@ -8,7 +8,9 @@ import {
 
 describe(`FileSource`, () => {
   it(`Should convert string with newlines to line chunks`, async () => {
-    const stream = await fileSource(`tests/testdata/fileSource.example.txt`);
+    const stream = await fileSource(
+      `tests/testdata/fileSourceUtf8.example.txt`,
+    );
     await stream
       .pipeThrough(uint8ToUtf8({}))
       .pipeThrough(stringToLines())

@@ -3,7 +3,9 @@ import { fileSource, simpleCallbackTarget } from "@mod";
 
 describe(`FileSource`, () => {
   it(`Should open file`, async () => {
-    const stream = await fileSource(`tests/testdata/fileSource.example.txt`);
+    const stream = await fileSource(
+      `tests/testdata/fileSourceUtf8.example.txt`,
+    );
     await stream.pipeTo(simpleCallbackTarget((chunk) => console.log(chunk)));
   });
 });

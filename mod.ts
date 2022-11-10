@@ -9,6 +9,7 @@ export * from "./lib/sources/fileSource.ts";
 
 // Transforms
 export * from "./lib/transforms/uint8ToUtf8.ts";
+export * from "./lib/transforms/stringToLines.ts";
 
 // Targets
 export * from "./lib/targets/simpleCallbackTarget.ts";

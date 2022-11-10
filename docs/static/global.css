@@ -11,6 +11,7 @@ html {
 
 body {
     --link-visited: var(--text2);
+    background: var(--surface-1);
 }
 
 main {
@@ -32,10 +33,13 @@ nav {
 nav>a {
     padding-block: var(--size-3);
     margin-block: var(--size-2);
+    margin-inline: var(--size-1);
     color: var(--text2);
     letter-spacing: var(--font-letterspacing-4);
     text-decoration: none;
     height: max-content;
+    font-size: var(--font-size-3);
+    font-weight: var(font-weight-2);
 }
 
 nav>a:hover,
@@ -50,7 +54,19 @@ nav>a:visited {
     /* color: var(--gray-7) */
 }
 
-h1,
+h1 {
+    background-image: var(--gradient-3);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    margin-block: var(--size-5);
+    /* -webkit-text-stroke: 2px var(--text2) */
+    /* text-shadow: 2px 2px var(--text1); */
+}
+
+
+
 h2,
 h3,
 h4 {

@@ -30,13 +30,15 @@ ToDo (Look at the tests in the meantime! They give you a very good idea of how t
 ## Sources
 
 - timerSource() - implemented ✅
-- fileSource() - planned
+- fileSource() - implemented ✅ (with simple Uint8Array Chunks)
 
 ## Transforms
 
+- bytesToString() - implemented ✅
+- stringToLines() - implemented ✅
 - map() - planned
 - reduce() - planned
-
+- multiplex() - in consideration => would multiplex different Readables by wrapping each chunk in an event which gets an id to uniquely identify the source readable in the resulting stream
 ## Targets
 
 - simpleCallbackTarget() - implemented ✅

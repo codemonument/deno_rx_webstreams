@@ -8,7 +8,7 @@ export * from "./lib/sources/timerSource.ts";
 export * from "./lib/sources/fileSource.ts";
 
 // Transforms
-export * from "./lib/transforms/uint8ToUtf8.ts";
+export * from "./lib/transforms/bytesToString.ts";
 export * from "./lib/transforms/stringToLines.ts";
 
 // Targets

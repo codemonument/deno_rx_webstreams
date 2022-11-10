@@ -1,9 +1,9 @@
 import { assert, describe, it } from "@deps/std_testing.ts";
 import {
+  bytesToString,
   fileSource,
   simpleCallbackTarget,
   stringToLines,
-  uint8ToUtf8,
 } from "@mod";
 
 describe(`FileSource`, () => {
@@ -12,7 +12,7 @@ describe(`FileSource`, () => {
       `tests/testdata/fileSourceUtf8.example.txt`,
     );
     await stream
-      .pipeThrough(uint8ToUtf8({}))
+      .pipeThrough(bytesToString())
       .pipeThrough(stringToLines())
       .pipeTo(
         simpleCallbackTarget((chunk) => console.log(`Chunk: `, chunk)),

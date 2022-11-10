@@ -22,8 +22,8 @@
         }
     },
     "tasks": {
-        "start": "deno run -A --watch=docs/static/,docs/routes/ docs/dev.ts",
-        "docs": "deno run -A docs/main.ts", 
+        "docs": "deno run -A --watch=docs/static/,docs/routes/ docs/dev.ts", 
+        "docs-prod": "deno run -A docs/main.ts", 
         "test": "deno test"
     }
 }

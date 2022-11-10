@@ -5,6 +5,7 @@
 
 // Sources
 export * from "./lib/sources/timerSource.ts";
+export * from "./lib/sources/fileSource.ts";
 
 // Targets
 export * from "./lib/targets/simpleCallbackTarget.ts";

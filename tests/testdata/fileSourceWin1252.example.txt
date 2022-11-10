@@ -1,0 +1,2 @@
+This is an example file which is read by the fileSource() readable generator. 
+This is the second line. 

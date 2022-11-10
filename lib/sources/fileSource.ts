@@ -3,7 +3,7 @@ export type FileSourceOptions = {};
 const defaultOptions: FileSourceOptions = {};
 
 /**
- * Creates a Source ReadableStream (Webstream) which opens a file for reading
+ * Creates a Source ReadableStream (Webstream) which opens a file for reading.
  */
 export async function fileSource(
   filepath: string,

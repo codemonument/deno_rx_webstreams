@@ -8,7 +8,7 @@ const defaultOptions: FileSourceOptions = {};
 export async function fileSource(
   filepath: string,
   options?: FileSourceOptions,
-) {
+): Promise<ReadableStream<Uint8Array>> {
   if (!options) {
     options = defaultOptions;
   } else {

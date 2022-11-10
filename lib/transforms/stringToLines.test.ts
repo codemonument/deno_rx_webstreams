@@ -13,7 +13,7 @@ describe(`FileSource`, () => {
       .pipeThrough(uint8ToUtf8({}))
       .pipeThrough(stringToLines())
       .pipeTo(
-        simpleCallbackTarget((chunk) => console.log(`New Chunk: `, chunk)),
+        simpleCallbackTarget((chunk) => console.log(`Chunk: `, chunk)),
       );
   });
 });

@@ -6,6 +6,8 @@ describe(`FileSource`, () => {
   it(`Should transcode file bytes to text`, async () => {
     const stream = await fileSource(`tests/testdata/fileSource.example.txt`);
     await stream.pipeThrough(uint8ToUtf8({}))
-      .pipeTo(simpleCallbackTarget((chunk) => console.log(chunk)));
+      .pipeTo(
+        simpleCallbackTarget((chunk) => console.log(`Chunk: `, chunk)),
+      );
   });
 });

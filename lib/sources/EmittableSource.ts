@@ -1,37 +1,20 @@
-import { UnderlyingSourceWithController } from "../utils/UnderlyingSourceWithController.ts";
-export class EmittableSource<T> extends ReadableStream<T> {
-  private controller: ReadableStreamDefaultController;
+import { EmittableSource } from "./extended-readable-streams/EmittableSource.ts";
+export type EmittableSourceOptions = {};
 
-  constructor(source: UnderlyingSourceWithController) {
-    super(source);
-    this.controller = source.controller;
-  }
+const defaultOptions: EmittableSourceOptions = {};
 
-  public static create<T = any>(): EmittableSource<T> {
-    const source = new UnderlyingSourceWithController<T>();
-    return new EmittableSource<T>(source);
+/**
+ * Creates a Source ReadableStream (Webstream) which opens a file for reading.
+ */
+export function emittableSource<T>(
+  options?: EmittableSourceOptions,
+): EmittableSource<T> {
+  if (!options) {
+    options = defaultOptions;
+  } else {
+    options = { ...defaultOptions, ...options };
   }
+  const {} = options;
 
-  /**
-   * Enqeues chunks on demand!
-   */
-  public emit(chunk: T) {
-    this.controller.enqueue(chunk);
-  }
-
-  /**
-   * Enqueues many chunks on demand!
-   */
-  public emitMany(chunks: T[]) {
-    for (const chunk of chunks) {
-      this.controller.enqueue(chunk);
-    }
-  }
-
-  /**
-   * Closes the underlying controller of this EmittableSource
-   */
-  public finish() {
-    this.controller.close();
-  }
+  return EmittableSource.create<T>();
 }

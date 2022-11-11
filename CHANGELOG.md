@@ -1,5 +1,11 @@
 # Changelog rx_webstreams 
 
+## 0.4.1 - 2022-11-11 
+
+- Rename EmittableSource class to EmittableSourceStream
+- Add emittableSource() function which wraps EmittableSourceStream
+- delete version.ts since it couldn't keep up with real new versions. Source of truth for versions: git tags.
+
 ## 0.4.0 - 2022-11-11 
 
 - Add EmittableSource (builds a readable stream which allows manually emitting events from outside)

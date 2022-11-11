@@ -2,6 +2,7 @@ import { assertExists, describe, it } from "@deps/std_testing.ts";
 import {
   bytesToString,
   emittableSource,
+  EmittableSourceStream,
   fileSource,
   simpleCallbackTarget,
   stringToLines,
@@ -14,6 +15,7 @@ describe(`mod.ts`, () => {
     assertExists(fileSource);
     assertExists(timerSource);
     assertExists(emittableSource);
+    assertExists(EmittableSourceStream);
 
     // Transforms
 

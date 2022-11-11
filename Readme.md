@@ -76,5 +76,5 @@ Nothing currently
     - Buffer (complete custom, with private readable and writable)
       https://deno.land/std@0.163.0/streams/buffer.ts?source
 
-=> Decision: Use classes which can directly be used with .pipeThrough() and .pipeTo(), bc. deno also does this. 
-   Try to implement an EmittableSource() without .readable.property
+=> Decision: Use functions, which return things that can directly be used with .pipeThrough() and .pipeTo(). 
+This allow the implementer of these functions to reuse functionality implemented as classes by deno or custom classes from this package, by having a unified interface to the outside world. 

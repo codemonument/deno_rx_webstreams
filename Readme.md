@@ -31,6 +31,7 @@ ToDo (Look at the tests in the meantime! They give you a very good idea of how t
 
 - timerSource() - implemented ✅
 - fileSource() - implemented ✅ (with simple Uint8Array Chunks)
+- emitableSource() - consideration: allows to manually emit chunks into the controller of this readable stream
 
 ## Transforms
 

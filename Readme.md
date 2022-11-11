@@ -25,7 +25,7 @@ This package is especially not based on RxJS!
 
 ## Usage 
 
-ToDo (Look at the tests in the meantime! They give you a very good idea of how to use those!)
+TODO: (Look at the tests in the meantime! They give you a very good idea of how to use those!)
 
 ## Sources
 
@@ -54,3 +54,26 @@ ToDo (Look at the tests in the meantime! They give you a very good idea of how t
 - [MDN - Using Readable Streams](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams)
 - [MDN - Using Readable Byte Streams](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)
 - [MDN - Using Writable Streams](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_writable_streams)
+
+## Open Issues 
+
+Nothing currently 
+
+## Decision Archive
+
+### Unified Convention for API Surface of rx_webstreams
+- Find unified convetion whether my sources, transforms and targets should be classes or functions!
+  - Pro: Classes can have extra methods (for example: starting/stopping a timer source, or emitting chunks manually)
+  - Contra: Can't build an EmittableSource as extends ReadableStream (due to not being able to extract the controller in the constructor)
+    => Must build EmittableSource as emittableSource.readble to access the underlying readable stream. 
+    => To have unified convention, a class-based system, all classes must then use a `.readable` and `.writable` property
+    => this is more ugly than accessing the source directly, like: new Source().readable.pipeThrough().pipeTo(new Target().writable)
+
+- Hints: 
+  - Deno std/streams uses classes which directly implement ReadableStream, TransformStream or WritableStream. 
+    - Delimiter (TransformStream): https://deno.land/std@0.163.0/streams/delimiter.ts?source
+    - Buffer (complete custom, with private readable and writable)
+      https://deno.land/std@0.163.0/streams/buffer.ts?source
+
+=> Decision: Use classes which can directly be used with .pipeThrough() and .pipeTo(), bc. deno also does this. 
+   Try to implement an EmittableSource() without .readable.property

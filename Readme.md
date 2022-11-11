@@ -54,6 +54,7 @@ TODO: (Look at the tests in the meantime! They give you a very good idea of how 
 - [MDN - Using Readable Streams](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams)
 - [MDN - Using Readable Byte Streams](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)
 - [MDN - Using Writable Streams](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_writable_streams)
+- [Interesting Guide to Webstreams on sitepen](https://www.sitepen.com/blog/a-guide-to-faster-web-app-io-and-data-operations-with-streams)
 
 ## Open Issues 
 

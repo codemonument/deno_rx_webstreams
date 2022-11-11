@@ -6,6 +6,9 @@ const defaultOptions: StringToLinesOptions = {};
 
 /**
  * Creates a Source ReadableStream (Webstream) which opens a file for reading.
+ *
+ * This does basically the same as TextLineStream in deno std/streams/delimiter.ts
+ * https://deno.land/std/streams/delimiter.ts?source
  */
 export function stringToLines(
   options?: StringToLinesOptions,

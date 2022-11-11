@@ -31,12 +31,12 @@ TODO: (Look at the tests in the meantime! They give you a very good idea of how 
 
 - timerSource() - implemented ✅
 - fileSource() - implemented ✅ (with simple Uint8Array Chunks)
-- emitableSource() - consideration: allows to manually emit chunks into the controller of this readable stream
+- emitableSource() - implemented ✅ - allows to manually emit chunks into the controller of this readable stream
 
 ## Transforms
 
-- bytesToString() - implemented ✅
-- stringToLines() - implemented ✅
+- bytesToString() - implemented ✅ - converts uint8Array chunk to string 
+- stringToLines() - implemented ✅ - converts string chunks delimited by newline into one string line per chunk
 - map() - planned
 - reduce() - planned
 - multiplex() - in consideration => would multiplex different Readables by wrapping each chunk in an event which gets an id to uniquely identify the source readable in the resulting stream

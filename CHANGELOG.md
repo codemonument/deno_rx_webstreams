@@ -1,5 +1,9 @@
 # Changelog rx_webstreams 
 
+## 0.4.0 - 2022-11-11 
+
+- Add EmittableSource (builds a readable stream which allows manually emitting events from outside)
+
 ## 0.3.0 - 2022-11-10 
 
 - Add fileSource (opens a readable stream from a filepath and emits Uint8Array chunks)

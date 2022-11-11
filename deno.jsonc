@@ -24,6 +24,7 @@
     "tasks": {
         "docs": "deno run -A --watch=docs/static/,docs/routes/ docs/dev.ts", 
         "docs-prod": "deno run -A docs/main.ts", 
-        "test": "deno test"
+        "test": "deno test --allow-read",
+        "testu": "deno test -A -- --update"
     }
 }

@@ -1,5 +1,5 @@
 import { UnderlyingSourceWithController } from "../../utils/UnderlyingSourceWithController.ts";
-export class EmittableSource<T> extends ReadableStream<T> {
+export class EmittableSourceStream<T> extends ReadableStream<T> {
   private controller: ReadableStreamDefaultController;
 
   constructor(source: UnderlyingSourceWithController) {
@@ -7,9 +7,9 @@ export class EmittableSource<T> extends ReadableStream<T> {
     this.controller = source.controller;
   }
 
-  public static create<T = any>(): EmittableSource<T> {
+  public static create<T = any>(): EmittableSourceStream<T> {
     const source = new UnderlyingSourceWithController<T>();
-    return new EmittableSource<T>(source);
+    return new EmittableSourceStream<T>(source);
   }
 
   /**

@@ -1,4 +1,4 @@
-import { EmittableSource } from "./extended-readable-streams/EmittableSource.ts";
+import { EmittableSourceStream } from "./extended-readable-streams/EmittableSourceStream.ts";
 export type EmittableSourceOptions = {};
 
 const defaultOptions: EmittableSourceOptions = {};
@@ -8,7 +8,7 @@ const defaultOptions: EmittableSourceOptions = {};
  */
 export function emittableSource<T>(
   options?: EmittableSourceOptions,
-): EmittableSource<T> {
+): EmittableSourceStream<T> {
   if (!options) {
     options = defaultOptions;
   } else {
@@ -16,5 +16,5 @@ export function emittableSource<T>(
   }
   const {} = options;
 
-  return EmittableSource.create<T>();
+  return EmittableSourceStream.create<T>();
 }

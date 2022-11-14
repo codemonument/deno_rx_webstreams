@@ -1,18 +1,23 @@
 # Changelog rx_webstreams 
 
+## next 
+
+- Improve internal repo structure 
+- Add TransformStream map()
+
 ## 0.4.3 - 2022-11-14 
 
 - Export UnderlyingSourceWithController for external users being able to write extended emittable sources.
   (Only for advanced Usecases)
 ## 0.4.2 - 2022-11-14 
 
-- remove all default generic typings of 'any' and replace them with 'unknown' for better type safety
+- Remove all default generic typings of 'any' and replace them with 'unknown' for better type safety
 
 ## 0.4.1 - 2022-11-11 
 
 - Rename EmittableSource class to EmittableSourceStream
 - Add emittableSource() function which wraps EmittableSourceStream
-- delete version.ts since it couldn't keep up with real new versions. Source of truth for versions: git tags.
+- Delete version.ts since it couldn't keep up with real new versions. Source of truth for versions: git tags.
 
 ## 0.4.0 - 2022-11-11 
 

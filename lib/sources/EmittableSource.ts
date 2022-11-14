@@ -1,7 +1,7 @@
 import { EmittableSourceStream } from "./extended-readable-streams/EmittableSourceStream.ts";
+import { sanitizeOptions } from "../utils/sanitizeOptions.ts";
 export type EmittableSourceOptions = {};
-
-const defaultOptions: EmittableSourceOptions = {};
+const defaults: EmittableSourceOptions = {};
 
 /**
  * Creates a Source ReadableStream (Webstream) which opens a file for reading.
@@ -9,12 +9,7 @@ const defaultOptions: EmittableSourceOptions = {};
 export function emittableSource<T>(
   options?: EmittableSourceOptions,
 ): EmittableSourceStream<T> {
-  if (!options) {
-    options = defaultOptions;
-  } else {
-    options = { ...defaultOptions, ...options };
-  }
-  const {} = options;
+  const {} = sanitizeOptions(options, defaults);
 
   return EmittableSourceStream.create<T>();
 }

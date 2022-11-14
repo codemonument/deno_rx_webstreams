@@ -1,7 +1,6 @@
 import { assert, assertRejects, describe, it } from "@deps/std_testing.ts";
-import { map, simpleCallbackTarget, timerSource } from "@mod";
+import { map, simpleCallbackTarget, timerSource, validateChunk } from "@mod";
 import { z } from "../../deps/zod.ts";
-import { validateChunk } from "./validateChunk.ts";
 
 describe(`validateChunk Transform`, () => {
   it(`Should validate input chunk type`, async () => {

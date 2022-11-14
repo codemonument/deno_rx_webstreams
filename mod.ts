@@ -13,6 +13,7 @@ export * from "./lib/sources/extended-readable-streams/EmittableSourceStream.ts"
 export * from "./lib/transforms/bytesToString.ts";
 export * from "./lib/transforms/stringToLines.ts";
 export * from "./lib/transforms/map.ts";
+export * from "./lib/transforms/validateChunk.ts";
 
 // Targets
 export * from "./lib/targets/simpleCallbackTarget.ts";

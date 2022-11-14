@@ -9,6 +9,7 @@ import {
   stringToLines,
   timerSource,
   UnderlyingSourceWithController,
+  validateChunk,
 } from "@mod";
 
 describe(`mod.ts`, () => {
@@ -23,6 +24,7 @@ describe(`mod.ts`, () => {
     assertExists(bytesToString);
     assertExists(stringToLines);
     assertExists(map);
+    assertExists(validateChunk);
 
     // Targets
     assertExists(simpleCallbackTarget);

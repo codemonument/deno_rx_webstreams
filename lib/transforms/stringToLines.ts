@@ -1,8 +1,8 @@
 import { z } from "../../deps/zod.ts";
+import { sanitizeOptions } from "../utils/sanitizeOptions.ts";
 
 export type StringToLinesOptions = {};
-
-const defaultOptions: StringToLinesOptions = {};
+const defaults: StringToLinesOptions = {};
 
 /**
  * Creates a Source ReadableStream (Webstream) which opens a file for reading.
@@ -13,12 +13,7 @@ const defaultOptions: StringToLinesOptions = {};
 export function stringToLines(
   options?: StringToLinesOptions,
 ) {
-  if (!options) {
-    options = defaultOptions;
-  } else {
-    options = { ...defaultOptions, ...options };
-  }
-  const {} = options;
+  const {} = sanitizeOptions(options, defaults);
 
   const transform = new TransformStream<string, string>({
     start: () => {},

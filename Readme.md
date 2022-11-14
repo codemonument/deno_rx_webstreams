@@ -39,6 +39,7 @@ TODO: (Look at the tests in the meantime! They give you a very good idea of how 
 - stringToLines() - implemented ✅ - converts string chunks delimited by newline into one string line per chunk
 - map() - planned
 - reduce() - planned
+- collect() - in consideration - collects chunks as array with options for: how long should chunks be collected? (specific time, until buffer full, specific count, etc.) and emits the resulting array as event (similar to rxjs buffer)
 - multiplex() - in consideration => would multiplex different Readables by wrapping each chunk in an event which gets an id to uniquely identify the source readable in the resulting stream
 ## Targets
 

@@ -4,6 +4,7 @@ import {
   emittableSource,
   EmittableSourceStream,
   fileSource,
+  map,
   simpleCallbackTarget,
   stringToLines,
   timerSource,
@@ -19,9 +20,9 @@ describe(`mod.ts`, () => {
     assertExists(EmittableSourceStream);
 
     // Transforms
-
     assertExists(bytesToString);
     assertExists(stringToLines);
+    assertExists(map);
 
     // Targets
     assertExists(simpleCallbackTarget);

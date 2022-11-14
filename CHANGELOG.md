@@ -2,7 +2,7 @@
 
 ## next
 
-- Add test for map() to successfully validate input chunk type via zod schema
+- Extend map() to be able to validate input chunk via zod schema
 
 ## 0.5.1 - 2022-11-14 
 

@@ -4,6 +4,7 @@ import {
   emittableSource,
   EmittableSourceStream,
   fileSource,
+  filter,
   map,
   simpleCallbackTarget,
   stringToLines,
@@ -24,6 +25,7 @@ describe(`mod.ts`, () => {
     assertExists(bytesToString);
     assertExists(stringToLines);
     assertExists(map);
+    assertExists(filter);
     assertExists(validateChunk);
 
     // Targets

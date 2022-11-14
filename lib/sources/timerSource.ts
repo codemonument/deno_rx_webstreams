@@ -24,7 +24,7 @@ const defaults: TimerSourceOptions = {
 /**
  * Creates a Source ReadableStream (Webstream) which generates timer events as chunks.
  * @param options
- * @returns
+ * @emits The event count as number since the timer started
  */
 export function timerSource(options?: TimerSourceOptions) {
   const { maxEventCount, intervalInMilliseconds, abortSignal } =

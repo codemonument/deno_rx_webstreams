@@ -9,8 +9,10 @@ export class UnderlyingSourceWithController<R = unknown>
 
   constructor() {
   }
-
-  cancel?: ReadableStreamErrorCallback;
+  cancel?: ReadableStreamErrorCallback = (_reason?: unknown) => {
+    // Does not work bc. stream is mostly in use when it should be canceled!
+    // this.#controller?.close();
+  };
   pull?: ReadableStreamDefaultControllerCallback<R>;
   start?: ReadableStreamDefaultControllerCallback<R> = (controller) => {
     this.#controller = controller;

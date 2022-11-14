@@ -1,5 +1,9 @@
 # Changelog rx_webstreams 
 
+## next
+
+- Add test for map() to successfully validate input chunk type via zod schema
+
 ## 0.5.1 - 2022-11-14 
 
 - Fix export of emittableSource()

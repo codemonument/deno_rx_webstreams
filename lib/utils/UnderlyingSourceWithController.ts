@@ -1,4 +1,4 @@
-import { IllegalAccess } from "./IllegalAccess.error.ts";
+import { IllegalAccess } from "../errors.ts";
 
 /**
  * Type R = The type which is emitted by this underlying source

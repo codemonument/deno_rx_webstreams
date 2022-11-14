@@ -1,8 +1,9 @@
+import { sanitizeOptions } from "../utils/sanitizeOptions.ts";
 export type BytesToStringOptions = {
   label?: string;
 } & TextDecoderOptions;
 
-const defaultOptions: BytesToStringOptions = {};
+const defaults: BytesToStringOptions = {};
 
 /**
  * Creates a TransformStream (Webstream) which transforms uint8Array chunks to a string.
@@ -13,12 +14,6 @@ const defaultOptions: BytesToStringOptions = {};
 export function bytesToString(
   options?: BytesToStringOptions,
 ) {
-  if (!options) {
-    options = defaultOptions;
-  } else {
-    options = { ...defaultOptions, ...options };
-  }
-  const { label } = options;
-
+  const { label } = sanitizeOptions(options, defaults);
   return new TextDecoderStream(label, options);
 }

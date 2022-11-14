@@ -7,6 +7,7 @@ import {
   simpleCallbackTarget,
   stringToLines,
   timerSource,
+  UnderlyingSourceWithController,
 } from "@mod";
 
 describe(`mod.ts`, () => {
@@ -24,5 +25,8 @@ describe(`mod.ts`, () => {
 
     // Targets
     assertExists(simpleCallbackTarget);
+
+    // Utils
+    assertExists(UnderlyingSourceWithController);
   });
 });

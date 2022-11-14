@@ -1,5 +1,9 @@
 # Changelog rx_webstreams 
 
+## 0.4.3 - 2022-11-14 
+
+- Export UnderlyingSourceWithController for external users being able to write extended emittable sources.
+  (Only for advanced Usecases)
 ## 0.4.2 - 2022-11-14 
 
 - remove all default generic typings of 'any' and replace them with 'unknown' for better type safety

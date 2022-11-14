@@ -15,3 +15,6 @@ export * from "./lib/transforms/stringToLines.ts";
 
 // Targets
 export * from "./lib/targets/simpleCallbackTarget.ts";
+
+// Utils
+export * from "./lib/utils/UnderlyingSourceWithController.ts";

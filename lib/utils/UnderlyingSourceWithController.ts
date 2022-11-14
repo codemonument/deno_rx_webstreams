@@ -1,5 +1,9 @@
 import { IllegalAccess } from "./IllegalAccess.error.ts";
-export class UnderlyingSourceWithController<R = any>
+
+/**
+ * Type R = The type which is emitted by this underlying source
+ */
+export class UnderlyingSourceWithController<R = unknown>
   implements UnderlyingSource<R> {
   #controller?: ReadableStreamDefaultController<R>;
 

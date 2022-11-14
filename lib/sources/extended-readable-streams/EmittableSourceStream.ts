@@ -7,7 +7,7 @@ export class EmittableSourceStream<T> extends ReadableStream<T> {
     this.controller = source.controller;
   }
 
-  public static create<T = any>(): EmittableSourceStream<T> {
+  public static create<T = unknown>(): EmittableSourceStream<T> {
     const source = new UnderlyingSourceWithController<T>();
     return new EmittableSourceStream<T>(source);
   }

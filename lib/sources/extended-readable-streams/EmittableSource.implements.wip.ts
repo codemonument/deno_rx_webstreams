@@ -22,7 +22,7 @@ export class EmittableSource<T> implements ReadableStream<T> {
     return this.stream.locked;
   }
 
-  cancel(reason?: any): Promise<void> {
+  cancel(reason?: unknown): Promise<void> {
     return this.stream.cancel(reason);
   }
 

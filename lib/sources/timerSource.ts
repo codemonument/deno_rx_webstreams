@@ -1,3 +1,4 @@
+import { sanitizeOptions } from "../utils/sanitizeOptions.ts";
 export type TimerSourceOptions = {
   /**
    * The interval in milliseconds which is used for setInterval()
@@ -15,7 +16,7 @@ export type TimerSourceOptions = {
   abortSignal?: AbortSignal;
 };
 
-const defaultOptions: TimerSourceOptions = {
+const defaults: TimerSourceOptions = {
   intervalInMilliseconds: 100,
   maxEventCount: 5,
 };
@@ -26,13 +27,8 @@ const defaultOptions: TimerSourceOptions = {
  * @returns
  */
 export function timerSource(options?: TimerSourceOptions) {
-  if (!options) {
-    options = defaultOptions;
-  } else {
-    options = { ...defaultOptions, ...options };
-  }
-
-  const { maxEventCount, intervalInMilliseconds, abortSignal } = options;
+  const { maxEventCount, intervalInMilliseconds, abortSignal } =
+    sanitizeOptions(options, defaults);
 
   let timerId: number | undefined;
 

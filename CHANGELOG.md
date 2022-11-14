@@ -1,8 +1,10 @@
 # Changelog rx_webstreams 
 
-## next
+## 0.6.0 - 2022-11-14
 
 - Extend map() to be able to validate input chunk via zod schema
+- Add validateChunk() TransformStream
+- Add filter() TransformStream
 
 ## 0.5.1 - 2022-11-14 
 
@@ -11,7 +13,7 @@
 ## 0.5.0 - 2022-11-14 
 
 - Improve internal repo structure 
-- Add TransformStream map()
+- Add map() TransformStream
 
 ## 0.4.3 - 2022-11-14 
 

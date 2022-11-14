@@ -1,5 +1,6 @@
-import { assert, describe, it } from "@deps/std_testing.ts";
+import { describe, it } from "@deps/std_testing.ts";
 import { emittableSource, simpleCallbackTarget } from "@mod";
+
 describe(`EmittableSource`, () => {
   it(`Should create source object`, () => {
     const stream = emittableSource();
@@ -7,15 +8,15 @@ describe(`EmittableSource`, () => {
     stream.emit(`My second event!`);
     stream.pipeTo(simpleCallbackTarget((chunk) => console.log(chunk)));
 
-    stream.finish();
+    stream.cancel();
   });
 
-  it(`Should close emittableSource on .finish()`, () => {
+  it(`Should close emittableSource on .cancel()`, () => {
     const stream = emittableSource();
     stream.emit(`My first event!`);
     stream.emit(`My second event!`);
     stream.pipeTo(simpleCallbackTarget((chunk) => console.log(chunk)));
 
-    stream.finish();
+    stream.cancel();
   });
 });

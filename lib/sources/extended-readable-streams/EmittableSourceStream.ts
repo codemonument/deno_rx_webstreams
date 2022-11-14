@@ -31,7 +31,8 @@ export class EmittableSourceStream<T> extends ReadableStream<T> {
   /**
    * Closes the underlying controller of this EmittableSource
    */
-  public finish() {
+  public override cancel(_reason?: any): Promise<void> {
     this.controller.close();
+    return Promise.resolve();
   }
 }

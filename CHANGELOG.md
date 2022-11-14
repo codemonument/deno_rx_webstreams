@@ -1,5 +1,10 @@
 # Changelog rx_webstreams 
 
+## 0.6.1 - 2022-11-14
+
+- Override cancel() function in EmittableSourceStream to close stream correctly by closing the underlying controller. 
+- Remove now-obsolete EmittableSourceStream::finish() method.
+
 ## 0.6.0 - 2022-11-14
 
 - Extend map() to be able to validate input chunk via zod schema

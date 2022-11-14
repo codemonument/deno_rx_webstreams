@@ -1,5 +1,9 @@
 # Changelog rx_webstreams 
 
+## 0.5.1 - 2022-11-14 
+
+- Fix export of emittableSource()
+
 ## 0.5.0 - 2022-11-14 
 
 - Improve internal repo structure 

@@ -1,6 +1,6 @@
 # Changelog rx_webstreams 
 
-## next 
+## 0.5.0 - 2022-11-14 
 
 - Improve internal repo structure 
 - Add TransformStream map()

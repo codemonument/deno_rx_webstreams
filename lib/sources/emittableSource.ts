@@ -1,4 +1,4 @@
-import { EmittableSourceStream } from "./extended-readable-streams/EmittableSourceStream.ts";
+import { EmittableSourceStream } from "./emittable/EmittableSourceStream.ts";
 import { sanitizeOptions } from "../utils/sanitizeOptions.ts";
 export type EmittableSourceOptions = {};
 const defaults: EmittableSourceOptions = {};

@@ -5,7 +5,7 @@ const defaults: Options = {};
 /**
  * Creates a TransformStream (Webstream) which <does something>.
  */
-export function newStream<T>(options: Options) {
+export function newStream<T>(options?: Options) {
   const {} = sanitizeOptions(options, defaults);
 
   const transform = new TransformStream<T, T>({

@@ -2,7 +2,7 @@ import { sanitizeOptions } from "../utils/sanitizeOptions.ts";
 import { simpleCallbackTarget } from "@mod";
 
 export type InputStream<T> = { name: string; readable: ReadableStream<T> };
-export type MultiplexChunk<T> = T & { name: string };
+export type MultiplexChunk<T> = { name: string; value: T };
 
 export type MultiplexOptions = {};
 const defaults: MultiplexOptions = {};
@@ -13,7 +13,7 @@ const defaults: MultiplexOptions = {};
  * IMPORTANT: Does currently ONLY Support multiplexing ReadableStreams<T> with the same Type!
  * IMPORTANT: Does currently ONLY Support multiplexing ReadableStreams<T> when type extends Object!!
  */
-export function multiplexSource<T extends Record<string, unknown>>(
+export function multiplexSource<T>(
   inputStreams: InputStream<T>[],
   options?: MultiplexOptions,
 ) {
@@ -24,7 +24,7 @@ export function multiplexSource<T extends Record<string, unknown>>(
       for (const stream of inputStreams) {
         stream.readable.pipeTo(
           simpleCallbackTarget((chunk) => {
-            const newChunk = { name: stream.name, ...chunk };
+            const newChunk = { name: stream.name, value: chunk };
             controller.enqueue(newChunk);
           }),
         );

@@ -31,12 +31,10 @@ Deno.test(
       simpleCallbackTarget((chunk) => {
         console.log(`Chunk: `, chunk);
       }),
+      {},
     );
 
+    // NOTE: This promise will ONLY finish, when all input streams have completed!
     await promise;
-
-    // in prod use: cancel this multiplex stuff, but not in this function,
-    // bc. the await for the pipeTo promise blocks execution of this function until multiplex is canceled
-    // multiplex.cancel();
   },
 );

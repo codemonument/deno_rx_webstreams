@@ -21,14 +21,19 @@ export function multiplexSource<T>(
 
   const emittable = emittableSource<MultiplexChunk<T>>();
 
-  for (const stream of inputStreams) {
-    stream.readable.pipeTo(
-      simpleCallbackTarget((chunk) => {
-        const newChunk = { name: stream.name, value: chunk };
-        emittable.emit(newChunk);
-      }),
-    );
-  }
+  const inputStreamPromises = inputStreams.map(
+    (stream) => {
+      return stream.readable.pipeTo(
+        simpleCallbackTarget((chunk) => {
+          const newChunk = { name: stream.name, value: chunk };
+          emittable.emit(newChunk);
+        }),
+      );
+    },
+  );
+
+  // TODO: Improve finishing/error handling!
+  Promise.all(inputStreamPromises).then(() => emittable.cancel());
 
   return emittable;
 }

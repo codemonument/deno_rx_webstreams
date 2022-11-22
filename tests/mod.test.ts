@@ -6,6 +6,7 @@ import {
   fileSource,
   filter,
   map,
+  multiplexSource,
   simpleCallbackTarget,
   stringToLines,
   timerSource,
@@ -20,6 +21,7 @@ describe(`mod.ts`, () => {
     assertExists(timerSource);
     assertExists(emittableSource);
     assertExists(EmittableSourceStream);
+    assertExists(multiplexSource);
 
     // Transforms
     assertExists(bytesToString);

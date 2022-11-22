@@ -1,5 +1,9 @@
 # Changelog rx_webstreams 
 
+## 0.7.1 - 2022-11-20 
+
+- Add missing export for multiplexSource in mod.ts
+
 ## 0.7.0 - 2022-11-20 
 
 - Add multiplexSource() to mix multiple readable streams of same type T into one readable stream! 

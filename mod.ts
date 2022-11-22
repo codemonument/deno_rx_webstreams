@@ -8,6 +8,7 @@ export * from "./lib/sources/timerSource.ts";
 export * from "./lib/sources/fileSource.ts";
 export * from "./lib/sources/emittableSource.ts";
 export * from "./lib/sources/emittable/EmittableSourceStream.ts";
+export * from "./lib/sources/multiplexSource.ts";
 
 // Transforms
 export * from "./lib/transforms/bytesToString.ts";

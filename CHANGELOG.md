@@ -1,5 +1,10 @@
 # Changelog rx_webstreams 
 
+## 0.7.0 - 2022-11-20 
+
+- Add multiplexSource() to mix multiple readable streams of same type T into one readable stream! 
+  (Useful for showing multiple progress bars)
+
 ## 0.6.1 - 2022-11-14
 
 - Override cancel() function in EmittableSourceStream to close stream correctly by closing the underlying controller. 

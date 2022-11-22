@@ -32,6 +32,8 @@ TODO: (Look at the tests in the meantime! They give you a very good idea of how 
 - timerSource() - implemented ✅
 - fileSource() - implemented ✅ (with simple Uint8Array Chunks)
 - emitableSource() - implemented ✅ - allows to manually emit chunks into the controller of this readable stream
+- multiplexSource() - implemented ✅ - allows to mix multiple readable streams of same type T into one readable stream. 
+  Each chunk will therefore be wrapped into an event object which uniquely identifies the source readable of this chunk in the resulting stream
 
 ## Transforms
 
@@ -41,7 +43,6 @@ TODO: (Look at the tests in the meantime! They give you a very good idea of how 
 - filter() - implemented ✅ - removes chunks from a stream based on a predicate function (returns true or false)
 - reduce() - planned
 - collect() - in consideration - collects chunks as array with options for: how long should chunks be collected? (specific time, until buffer full, specific count, etc.) and emits the resulting array as event (similar to rxjs buffer)
-- multiplex() - in consideration => would multiplex different Readables by wrapping each chunk in an event which gets an id to uniquely identify the source readable in the resulting stream
 ## Targets
 
 - simpleCallbackTarget() - implemented ✅

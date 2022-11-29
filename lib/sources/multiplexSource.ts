@@ -1,5 +1,5 @@
 import { sanitizeOptions } from "../utils/sanitizeOptions.ts";
-import { emittableSource, simpleCallbackTarget } from "@mod";
+import { emittableSource, simpleCallbackTarget } from "../../mod.ts";
 
 export type InputStream<T> = { name: string; readable: ReadableStream<T> };
 export type MultiplexChunk<T> = { name: string; value: T };

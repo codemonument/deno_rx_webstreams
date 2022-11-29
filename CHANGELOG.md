@@ -1,5 +1,9 @@
 # Changelog rx_webstreams 
 
+## 0.7.2 - 2022-11-29 
+
+- fix imports of multiplexSource to not use @mod import_map
+
 ## 0.7.1 - 2022-11-20 
 
 - Add missing export for multiplexSource in mod.ts

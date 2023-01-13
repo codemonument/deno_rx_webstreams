@@ -17,17 +17,13 @@ It provides a lot of predefined sources, targets and especially transforms!
 Note, that the api is inspired by RxJS, but not related in any other way. 
 This package is especially not based on RxJS!
 
-## Parts 
+## Parts Overview
 
 - Sources: Predefined Readable Streams, like fileSource(), timerSource(), and more 
 - Transforms: Predefined Transport Streams, like map(), reduce(), and more 
 - Targets: Predefined Writable Streams, like fileTarget(), urlTarget(), and more
 
-## Usage 
-
-TODO: (Look at the tests in the meantime! They give you a very good idea of how to use those!)
-
-## Sources
+### Sources
 
 - timerSource() - implemented ✅
 - fileSource() - implemented ✅ (with simple Uint8Array Chunks)
@@ -35,7 +31,7 @@ TODO: (Look at the tests in the meantime! They give you a very good idea of how 
 - multiplexSource() - implemented ✅ - allows to mix multiple readable streams of same type T into one readable stream. 
   Each chunk will therefore be wrapped into an event object which uniquely identifies the source readable of this chunk in the resulting stream
 
-## Transforms
+### Transforms
 
 - bytesToString() - implemented ✅ - converts uint8Array chunk to string 
 - stringToLines() - implemented ✅ - converts string chunks delimited by newline into one string line per chunk
@@ -43,11 +39,26 @@ TODO: (Look at the tests in the meantime! They give you a very good idea of how 
 - filter() - implemented ✅ - removes chunks from a stream based on a predicate function (returns true or false)
 - reduce() - planned
 - collect() - in consideration - collects chunks as array with options for: how long should chunks be collected? (specific time, until buffer full, specific count, etc.) and emits the resulting array as event (similar to rxjs buffer)
-## Targets
+### Targets
 
 - simpleCallbackTarget() - implemented ✅
 - fileTarget() - planned
 - urlTarget() - in consideration
+
+## Detailed Usage Descrioptions
+
+TODO: (Look at the tests in the meantime! They give you a very good idea of how to use those!)
+
+## timerSource() 
+
+Creates a stream of events in regular intervalls. Uses `setInterval` unter the hood. 
+Has two usage modis: 
+
+- "Count Mode"
+- Endless Mode
+
+Extended usage: 
+"Waiting for X Seconds in a function with await"
 
 ## Useful Links 
 
@@ -61,7 +72,7 @@ TODO: (Look at the tests in the meantime! They give you a very good idea of how 
 
 ## Open Issues 
 
-Nothing currently 
+Nothing currently (only that it's an incomplete collection of tools)
 
 ## Decision Archive
 

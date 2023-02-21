@@ -37,7 +37,8 @@ This package is especially not based on RxJS!
 - stringToLines() - implemented ✅ - converts string chunks delimited by newline into one string line per chunk
 - map() - implemented ✅ - maps from one type of chunk to another
 - filter() - implemented ✅ - removes chunks from a stream based on a predicate function (returns true or false)
-- reduce() - planned
+- reduce() - implemented ✅ - allows to collect previous events into a single aggregate. 
+             The aggregate will be delivered to further streams at each input event.  
 - collect() - in consideration - collects chunks as array with options for: how long should chunks be collected? (specific time, until buffer full, specific count, etc.) and emits the resulting array as event (similar to rxjs buffer)
 ### Targets
 

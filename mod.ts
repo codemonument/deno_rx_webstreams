@@ -14,6 +14,7 @@ export * from "./lib/sources/multiplexSource.ts";
 export * from "./lib/transforms/bytesToString.ts";
 export * from "./lib/transforms/stringToLines.ts";
 export * from "./lib/transforms/map.ts";
+export * from "./lib/transforms/reduce.ts";
 export * from "./lib/transforms/filter.ts";
 export * from "./lib/transforms/validateChunk.ts";
 

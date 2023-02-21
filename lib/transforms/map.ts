@@ -1,6 +1,7 @@
 import { sanitizeOptions } from "../utils/sanitizeOptions.ts";
 import { ChunkTransformFunc } from "../types.ts";
 import { z, ZodSchema } from "../../deps/zod.ts";
+
 export type MapOptions<T> = {
   validator?: ZodSchema<T>;
 };

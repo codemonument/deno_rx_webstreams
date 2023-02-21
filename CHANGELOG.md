@@ -1,5 +1,9 @@
 # Changelog rx_webstreams 
 
+## 0.8.0 - 2023-02-21 
+
+- add new `reduce()` transformer with tests
+
 ## 0.7.2 - 2022-11-29 
 
 - fix imports of multiplexSource to not use @mod import_map

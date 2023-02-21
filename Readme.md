@@ -45,7 +45,7 @@ This package is especially not based on RxJS!
 - fileTarget() - planned
 - urlTarget() - in consideration
 
-## Detailed Usage Descrioptions
+## Detailed Usage Descriptions
 
 TODO: (Look at the tests in the meantime! They give you a very good idea of how to use those!)
 

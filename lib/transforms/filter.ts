@@ -5,9 +5,10 @@ export type FilterOptions = {};
 const defaults: FilterOptions = {};
 
 /**
- * Creates a TransformStream (Webstream) which converts from one chunk format to another.
+ * Creates a TransformStream (Webstream)
+ * which only emits chunks which pass the filter function with true
  *
- * This does basically the same as the map() pipe in rxjs.
+ * This does basically the same as the filter() pipe in rxjs.
  */
 export function filter<T>(
   filterFunc: ChunkFilterFunc<T>,

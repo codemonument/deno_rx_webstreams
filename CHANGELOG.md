@@ -1,5 +1,9 @@
 # Changelog rx_webstreams 
 
+## next
+
+- fix description for filter() transform
+
 ## 0.8.0 - 2023-02-21 
 
 - add new `reduce()` transformer with tests

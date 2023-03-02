@@ -9,7 +9,7 @@ const defaults: BytesToStringOptions = {};
  * Creates a TransformStream (Webstream) which transforms uint8Array chunks to a string.
  * Detects input encoding automatically!
  *
- * Basically the same as TextDecoderStream in deno std
+ * Basically the same as TextDecoderStream from Whatwg Standard
  */
 export function bytesToString(
   options?: BytesToStringOptions,

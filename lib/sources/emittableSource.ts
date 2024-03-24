@@ -4,7 +4,7 @@ export type EmittableSourceOptions = {};
 const defaults: EmittableSourceOptions = {};
 
 /**
- * Creates a Source ReadableStream (Webstream) which opens a file for reading.
+ * Creates a Source ReadableStream (Webstream) which produces a stream where events can be emitted into from the outside.
  */
 export function emittableSource<T>(
   options?: EmittableSourceOptions,

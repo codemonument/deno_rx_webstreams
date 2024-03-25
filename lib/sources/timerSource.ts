@@ -30,7 +30,9 @@ export function timerSource(options?: TimerSourceOptions) {
   const { maxEventCount, intervalInMilliseconds, abortSignal } =
     sanitizeOptions(options, defaults);
 
-  let timerId: number | undefined;
+  // timerId needs to be defined like this, since in node
+  // the return type of setInterval is this Timeout object, not an id like in the browser
+  let timerId: ReturnType<typeof setInterval> | undefined;
 
   const readableStream = new ReadableStream<number>({
     start(controller) {

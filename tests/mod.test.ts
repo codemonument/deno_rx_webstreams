@@ -1,4 +1,7 @@
 import { assertExists, describe, it } from "@deps/std_testing.ts";
+import { stringToUtf8Bytes } from "@mod";
+import { from } from "@mod";
+import { of } from "@mod";
 import {
   bytesToString,
   emittableSource,
@@ -22,6 +25,8 @@ describe(`mod.ts`, () => {
     assertExists(emittableSource);
     assertExists(EmittableSourceStream);
     assertExists(multiplexSource);
+    assertExists(of);
+    assertExists(from);
 
     // Transforms
     assertExists(bytesToString);
@@ -29,6 +34,7 @@ describe(`mod.ts`, () => {
     assertExists(map);
     assertExists(filter);
     assertExists(validateChunk);
+    assertExists(stringToUtf8Bytes);
 
     // Targets
     assertExists(simpleCallbackTarget);

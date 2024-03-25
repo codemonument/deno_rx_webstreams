@@ -1,9 +1,10 @@
 # Changelog rx_webstreams
 
-## next
+## 0.9.0 - 204-03-25
 
 - new of() - utility function to create a one-shot stream of one value
 - new from() - utility function to create a stream from an array of values
+- new stringToUtf8Bytes() - Transformer to convert string chunks to Uint8Array chunks
 
 ## 0.8.1 - 2024-03-24
 

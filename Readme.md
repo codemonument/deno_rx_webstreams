@@ -29,12 +29,12 @@ First: Know the deno std stream utilities! https://deno.land/std@0.178.0/streams
 ### Sources
 
 - timerSource() - implemented ✅
-- fileSource() - implemented ✅ (with simple Uint8Array Chunks)
+- fileSource() - implemented ✅ - (with simple Uint8Array Chunks)
 - emitableSource() - implemented ✅ - allows to manually emit chunks into the controller of this readable stream
 - multiplexSource() - implemented ✅ - allows to mix multiple readable streams of same type T into one readable stream.
   Each chunk will therefore be wrapped into an event object which uniquely identifies the source readable of this chunk in the resulting stream
-- of() - creates a readable stream and emits the parameter as the one and only chunk
-- from() - creates a readable stream and emits the parameter as chunks, if it is an array
+- of() - implemented ✅ - creates a readable stream and emits the parameter as the one and only chunk
+- from() - implemented ✅ - creates a readable stream and emits the parameter as chunks, if it is an array
 
 ### Transforms
 

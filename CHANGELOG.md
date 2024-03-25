@@ -3,6 +3,7 @@
 ## next
 
 - new of() - utility function to create a one-shot stream of one value
+- new from() - utility function to create a stream from an array of values
 
 ## 0.8.1 - 2024-03-24
 

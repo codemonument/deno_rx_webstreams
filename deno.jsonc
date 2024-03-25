@@ -2,29 +2,27 @@
  * Deno Config File
  * - jsonc = JSON with comments
  * - can be expanded as needed to configure integrated tsc, linter and formatter
- * 
+ *
  * Docs for Deno Tasks: https://deno.land/manual@v1.27.1/tools/task_runner
  *
- *  IMPORTANT: 
- *  Only use import_map.json for testing dependencies & docs page, 
+ *  IMPORTANT:
+ *  Only use import_map.json for testing dependencies & docs page,
  *  since it will not be resolved when mod.ts is used as library from outside!
  */
 {
-    "importMap": "import_map.json",
-    "compilerOptions": {
-        "strict": true,
-        "jsx": "react-jsx",
-        "jsxImportSource": "preact"
-    },
-    "test": {
-        "files": {
-            "include": ["tests", "lib"]
-        }
-    },
-    "tasks": {
-        "docs": "deno run -A --watch=docs/static/,docs/routes/ docs/dev.ts", 
-        "docs-prod": "deno run -A docs/main.ts", 
-        "test": "deno test --allow-read",
-        "testu": "deno test -A -- --update"
-    }
+  "importMap": "import_map.json",
+  "compilerOptions": {
+    "strict": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact"
+  },
+  "test": {
+    "include": ["tests", "lib"]
+  },
+  "tasks": {
+    "docs": "deno run -A --watch=docs/static/,docs/routes/ docs/dev.ts",
+    "docs-prod": "deno run -A docs/main.ts",
+    "test": "deno test --allow-read",
+    "testu": "deno test -A -- --update"
+  }
 }

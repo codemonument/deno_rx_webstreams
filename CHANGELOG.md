@@ -1,5 +1,9 @@
 # Changelog rx_webstreams
 
+## 0.9.2 - 204-03-25
+
+- Update License to MIT (missed publishing it correctly in the last tag)
+
 ## 0.9.1 - 204-03-25
 
 - Update License to MIT

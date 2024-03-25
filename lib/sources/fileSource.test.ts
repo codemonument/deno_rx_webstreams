@@ -1,7 +1,7 @@
-import { assert, describe, it } from "@deps/std_testing.ts";
+import { describe, it } from "@deps/std_testing.ts";
 import { fileSource, simpleCallbackTarget } from "@mod";
 
-describe(`FileSource`, () => {
+describe(`fileSource()`, () => {
   it(`Should open file`, async () => {
     const stream = await fileSource(
       `tests/testdata/fileSourceUtf8.example.txt`,

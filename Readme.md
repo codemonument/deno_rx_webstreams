@@ -20,7 +20,7 @@ This package is especially not based on RxJS!
 
 ## Parts Overview
 
-First: Know the deno std stream utilities! https://deno.land/std@0.178.0/streams/mod.ts
+First: Know the deno std stream utilities! https://deno.land/std@0.220.1/streams/mod.ts
 
 - Sources: Predefined Readable Streams, like fileSource(), timerSource(), and more
 - Transforms: Predefined Transport Streams, like map(), reduce(), and more

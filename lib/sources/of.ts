@@ -12,7 +12,10 @@ export function of<T>(data: T) {
     pull(_controller) {
     },
     cancel(reason) {
-      console.error(`Readable stream from of() cancelled bc. of: `, reason);
+      console.error(
+        `Readable stream originated from of() cancelled bc. of: `,
+        reason,
+      );
     },
   });
 

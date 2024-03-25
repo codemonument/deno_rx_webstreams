@@ -1,4 +1,4 @@
-import { assert, describe, it } from "@deps/std_testing.ts";
+import { describe, it } from "@deps/std_testing.ts";
 import {
   bytesToString,
   fileSource,

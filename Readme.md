@@ -40,6 +40,7 @@ First: Know the deno std stream utilities! https://deno.land/std@0.220.1/streams
 
 - bytesToString() - implemented ✅ - converts uint8Array chunk to string
 - stringToLines() - implemented ✅ - converts string chunks delimited by newline into one string line per chunk
+- stringToUtf8Bytes() - implemented ✅ - converts string chunks to Uint8Array chunks
 - map() - implemented ✅ - maps from one type of chunk to another
 - filter() - implemented ✅ - removes chunks from a stream based on a predicate function (returns true or false)
 - reduce() - implemented ✅ - allows to collect previous events into a single aggregate.

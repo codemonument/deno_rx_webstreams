@@ -14,7 +14,11 @@
   "compilerOptions": {
     "strict": true,
     "jsx": "react-jsx",
-    "jsxImportSource": "preact"
+    "jsxImportSource": "preact",
+    "lib": [
+      "deno.window",
+      "dom"
+    ]
   },
   "test": {
     "include": ["tests", "lib"]

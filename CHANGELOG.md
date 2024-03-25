@@ -1,5 +1,9 @@
 # Changelog rx_webstreams
 
+## 0.9.1 - 204-03-25
+
+- Update License to MIT
+
 ## 0.9.0 - 204-03-25
 
 - new of() - utility function to create a one-shot stream of one value

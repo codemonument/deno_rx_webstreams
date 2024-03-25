@@ -60,7 +60,7 @@ export function timerSource(options?: TimerSourceOptions) {
     pull(_controller) {
     },
     cancel(reason) {
-      console.error(`DemoReadableStream cancelled bc. of: `, reason);
+      console.error(`timerSource() Readable stream cancelled bc. of: `, reason);
       clearInterval(timerId);
     },
   });

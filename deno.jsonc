@@ -34,7 +34,8 @@
     "testu": "deno test -A -- --update",
     // publishing tasks
     "version": "deno run -A ./scripts/update-version.ts",
-    "dry": "deno publish --dry-run"
+    "dry": "deno publish --dry-run",
+    "publish": "deno publish"
   },
   "imports": {
     "@codemonument/update-denoconfig": "jsr:@codemonument/update-denoconfig@^1.0.6",

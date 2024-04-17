@@ -1,5 +1,5 @@
+import type { ChunkFilterFunc } from "../types.ts";
 import { sanitizeOptions } from "../utils/sanitizeOptions.ts";
-import { ChunkFilterFunc } from "../types.ts";
 
 export type FilterOptions = {};
 const defaults: FilterOptions = {};
@@ -13,7 +13,7 @@ const defaults: FilterOptions = {};
 export function filter<T>(
   filterFunc: ChunkFilterFunc<T>,
   options?: FilterOptions,
-) {
+): TransformStream<T, T> {
   const {} = sanitizeOptions(options, defaults);
 
   const transform = new TransformStream<T, T>({

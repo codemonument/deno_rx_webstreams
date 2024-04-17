@@ -1,4 +1,4 @@
-export function from<T>(data: T[]) {
+export function from<T>(data: T[]): ReadableStream<T> {
   if (!Array.isArray(data)) {
     throw new Error(
       `from() expects an array as an argument but got "${typeof data}" and data: `,

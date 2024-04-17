@@ -1,6 +1,6 @@
+import type { ZodSchema } from "../../deps/zod.ts";
+import type { ChunkTransformFunc } from "../types.ts";
 import { sanitizeOptions } from "../utils/sanitizeOptions.ts";
-import { ChunkTransformFunc } from "../types.ts";
-import { z, ZodSchema } from "../../deps/zod.ts";
 
 export type MapOptions<T> = {
   validator?: ZodSchema<T>;
@@ -14,7 +14,7 @@ export type MapOptions<T> = {
 export function map<T, R>(
   mapFunc: ChunkTransformFunc<T, R>,
   options?: MapOptions<T>,
-) {
+): TransformStream<T, R> {
   const defaults: MapOptions<T> = {};
   const { validator } = sanitizeOptions(options, defaults);
 

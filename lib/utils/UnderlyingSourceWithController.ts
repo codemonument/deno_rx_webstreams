@@ -19,7 +19,7 @@ export class UnderlyingSourceWithController<R = unknown>
   }
   type?: undefined;
 
-  get controller() {
+  get controller(): ReadableStreamDefaultController<R> {
     if (!this.#controller) {
       throw new IllegalAccess(
         `No controller available yet. Please wait a bit longer, it should appear automatically in the next js tick`,

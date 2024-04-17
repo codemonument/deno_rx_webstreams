@@ -1,5 +1,6 @@
-import { sanitizeOptions } from "../utils/sanitizeOptions.ts";
 import { emittableSource, simpleCallbackTarget } from "../../mod.ts";
+import { sanitizeOptions } from "../utils/sanitizeOptions.ts";
+import type { EmittableSourceStream } from "./emittable/EmittableSourceStream.ts";
 
 export type InputStream<T> = { name: string; readable: ReadableStream<T> };
 export type MultiplexChunk<T> = { name: string; value: T };
@@ -16,7 +17,7 @@ const defaults: MultiplexOptions = {};
 export function multiplexSource<T>(
   inputStreams: InputStream<T>[],
   options?: MultiplexOptions,
-) {
+): EmittableSourceStream<MultiplexChunk<T>> {
   const {} = sanitizeOptions(options, defaults);
 
   const emittable = emittableSource<MultiplexChunk<T>>();

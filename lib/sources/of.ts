@@ -3,7 +3,7 @@
  * @param data: T
  * @returns ReadableStream<T>
  */
-export function of<T>(data: T) {
+export function of<T>(data: T): ReadableStream<T> {
   const readableStream = new ReadableStream<T>({
     start(controller) {
       controller.enqueue(data);

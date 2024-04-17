@@ -13,7 +13,7 @@ const defaults: BytesToStringOptions = {};
  */
 export function bytesToString(
   options?: BytesToStringOptions,
-) {
+): TextDecoderStream {
   const { label } = sanitizeOptions(options, defaults);
   return new TextDecoderStream(label, options);
 }

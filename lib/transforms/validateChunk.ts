@@ -11,7 +11,7 @@ export type ValidateChunkOptions<R> = {
  */
 export function validateChunk<R>(
   options: ValidateChunkOptions<R>,
-) {
+): TransformStream<unknown, R> {
   const defaults: ValidateChunkOptions<R> = {
     validator: z.NEVER,
   };

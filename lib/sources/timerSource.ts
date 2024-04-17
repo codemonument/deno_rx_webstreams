@@ -26,7 +26,9 @@ const defaults: TimerSourceOptions = {
  * @param options
  * @emits The event count as number since the timer started
  */
-export function timerSource(options?: TimerSourceOptions) {
+export function timerSource(
+  options?: TimerSourceOptions,
+): ReadableStream<number> {
   const { maxEventCount, intervalInMilliseconds, abortSignal } =
     sanitizeOptions(options, defaults);
 

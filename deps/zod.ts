@@ -1,1 +1,1 @@
-export * from "https://deno.land/x/zod@v3.22.4/mod.ts";
+export * from "npm:zod@3.22.4";

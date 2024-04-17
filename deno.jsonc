@@ -10,7 +10,11 @@
  *  since it will not be resolved when mod.ts is used as library from outside!
  */
 {
-  "importMap": "import_map.json",
+  "name": "@codemonument/rx-webstreams",
+  "version": "0.9.3",
+  "exports": {
+    ".": "./mod.ts"
+  },
   "compilerOptions": {
     "strict": true,
     "jsx": "react-jsx",
@@ -27,6 +31,35 @@
     "docs": "deno run -A --watch=docs/static/,docs/routes/ docs/dev.ts",
     "docs-prod": "deno run -A docs/main.ts",
     "test": "deno test --allow-read",
-    "testu": "deno test -A -- --update"
+    "testu": "deno test -A -- --update",
+    // publishing tasks
+    "version": "deno run -A ./scripts/update-version.ts",
+    "dry": "deno publish --dry-run",
+    "publish": "deno publish"
+  },
+  "imports": {
+    "@codemonument/update-denoconfig": "jsr:@codemonument/update-denoconfig@^1.0.6",
+    "@codemonument/zod-semver": "jsr:@codemonument/zod-semver@^1.3.8",
+    "@mod": "./mod.ts",
+    "@version": "./version.ts",
+    "@deps/": "./deps/",
+    "@testutils/": "./tests/_testutils/",
+    "@docs/": "./docs/",
+    "$fresh/": "https://deno.land/x/fresh@1.1.2/",
+    "preact": "https://esm.sh/preact@10.11.0",
+    "preact/": "https://esm.sh/preact@10.11.0/",
+    "preact-render-to-string": "https://esm.sh/*preact-render-to-string@5.2.4",
+    "@preact/signals": "https://esm.sh/*@preact/signals@1.0.3",
+    "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.0.1"
+  },
+  "publish": {
+    "include": [
+      "README.md",
+      "mod.ts",
+      "deno.jsonc",
+      "VERSION.ts",
+      "lib/",
+      "deps/"
+    ]
   }
 }

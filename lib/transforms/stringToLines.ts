@@ -12,7 +12,7 @@ const defaults: StringToLinesOptions = {};
  */
 export function stringToLines(
   options?: StringToLinesOptions,
-) {
+): TransformStream<string, string> {
   const {} = sanitizeOptions(options, defaults);
 
   const transform = new TransformStream<string, string>({

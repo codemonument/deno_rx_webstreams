@@ -1,5 +1,5 @@
-import { ZodSchema } from "../../deps/zod.ts";
-import { ChunkReduceFunc } from "../shared/types/ChunkReduceFunc.ts";
+import type { ZodSchema } from "../../deps/zod.ts";
+import type { ChunkReduceFunc } from "../shared/types/ChunkReduceFunc.ts";
 
 export type ReduceOptions<C, A> = {
   initialAggregate: A;
@@ -14,7 +14,7 @@ export type ReduceOptions<C, A> = {
 export function reduce<C, A>(
   reduceFunc: ChunkReduceFunc<C, A>,
   options: ReduceOptions<C, A>,
-) {
+): TransformStream<C, A> {
   // We don't need to sanitize options here, since the options key is required anyway
   const { validator, initialAggregate } = options;
 

@@ -1,14 +1,18 @@
 # Changelog rx_webstreams
 
-## 0.9.2 - 204-03-25
+## 0.9.3 - 2024-04-17
+
+- Release JSR Package
+
+## 0.9.2 - 2024-03-25
 
 - Update License to MIT (missed publishing it correctly in the last tag)
 
-## 0.9.1 - 204-03-25
+## 0.9.1 - 2024-03-25
 
 - Update License to MIT
 
-## 0.9.0 - 204-03-25
+## 0.9.0 - 2024-03-25
 
 - new of() - utility function to create a one-shot stream of one value
 - new from() - utility function to create a stream from an array of values

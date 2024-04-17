@@ -1,5 +1,9 @@
 # Changelog rx_webstreams
 
+## 0.9.4 - 2024-04-17
+
+- Add JSR Provenance by building via gihub actions
+
 ## 0.9.3 - 2024-04-17
 
 - Release JSR Package

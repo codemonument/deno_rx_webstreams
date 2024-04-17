@@ -54,10 +54,11 @@
   },
   "publish": {
     "include": [
-      "README.md",
-      "mod.ts",
       "deno.jsonc",
+      "README.md",
+      "CHANGELOG.md",
       "VERSION.ts",
+      "mod.ts",
       "lib/",
       "deps/"
     ]

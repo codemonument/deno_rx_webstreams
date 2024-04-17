@@ -10,7 +10,7 @@
  *  since it will not be resolved when mod.ts is used as library from outside!
  */
 {
-  "name": "@codemonument/update-denoconfig",
+  "name": "@codemonument/rx-webstreams",
   "version": "0.9.2",
   "exports": {
     ".": "./mod.ts"

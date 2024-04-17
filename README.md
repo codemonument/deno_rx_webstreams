@@ -86,6 +86,16 @@ Extended usage:
 
 Nothing currently (only that it's an incomplete collection of tools)
 
+## Publishing new version (for maintainers)
+
+1. Run `deno task version x.x.x` to update the version in all files
+2. Update the CHANGELOG.md with the new version and the changes
+3. Commit
+4. Tag the commit with the new version
+5. Push the commit and the tag => Github Actions publishes the new version to JSR
+
+---
+
 ## Decision Archive
 
 ### Unified Convention for API Surface of rx_webstreams

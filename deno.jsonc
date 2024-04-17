@@ -54,7 +54,9 @@
   "publish": {
     "include": [
       "README.md",
-      "mod.ts"
+      "mod.ts",
+      "lib/",
+      "deps/"
     ]
   }
 }

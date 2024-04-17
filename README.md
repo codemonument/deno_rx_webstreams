@@ -16,7 +16,7 @@ See here for details in the [progress package](https://deno.land/x/progress): ht
 ## Description
 
 A deno package by [@codemonument](https://github.com/codemonument) with RxJS like functionality, but for webstreams.
-It provides a lot of predefined sources, targets and especially transforms!
+It provides a lot of predefined sources (aka ReadableStreams), targets (aka WriteableStreams) and especially transforms (aka TransformStreams)!
 
 Note, that the api is inspired by RxJS, but not related in any other way.
 This package is especially not based on RxJS!

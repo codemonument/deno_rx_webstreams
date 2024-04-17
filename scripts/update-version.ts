@@ -15,7 +15,6 @@ const newVersion = newVersionParse.data;
 
 // Stage: Input valid
 // ------------------------------------------------
-console.log(`Updating version of this package to ${newVersion}`);
 
 // STAGE: Update the version in the deno.jsonc file
 // ------------------------------------------------
@@ -24,6 +23,7 @@ const updateObject = {
 };
 // Note: The path is relative to the current working directory
 await updateConfig("./deno.jsonc", updateObject);
+console.log(`Updated 'version' field of ./deno.jsonc to ${newVersion}`);
 
 // STAGE: Update the version in the version.ts file
 // ------------------------------------------------
@@ -35,3 +35,7 @@ const VERSION_variable = versionFile.getVariableDeclarationOrThrow("VERSION");
 VERSION_variable.setInitializer(`"${newVersion}"`);
 
 await project.save();
+
+console.log(
+  `Updated 'VERSION' variable export in ./VERSION.ts to ${newVersion}`,
+);

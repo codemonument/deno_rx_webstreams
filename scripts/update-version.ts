@@ -29,7 +29,7 @@ await updateConfig("./deno.jsonc", updateObject);
 // ------------------------------------------------
 import { Project } from "npm:ts-morph";
 const project = new Project();
-const versionFile = project.addSourceFileAtPath("version.ts");
+const versionFile = project.addSourceFileAtPath("VERSION.ts");
 
 const VERSION_variable = versionFile.getVariableDeclarationOrThrow("VERSION");
 VERSION_variable.setInitializer(`"${newVersion}"`);

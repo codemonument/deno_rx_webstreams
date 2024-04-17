@@ -1,6 +1,9 @@
 # Rx Webstreams
 
-**Note: Very limited coverage right now**
+[![JSR](https://jsr.io/badges/@codemonument/rx-webstreams)](https://jsr.io/@codemonument/rx-webstreams/)
+[![DenoLand/x](https://shield.deno.dev/x/rx_webstreams)](https://deno.land/x/rx_webstreams)
+
+**Note: Limited coverage right now**  
 Compared to rxJS, this lib has not nearly implemented enough at the time.
 But, all things that are added are inteded to be unit-tested well.
 
